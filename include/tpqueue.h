@@ -9,10 +9,9 @@ class TPQueue {
     T value;
     struct node* next;
   } Node;
-  
-	Node* front;
+  Node* front;
+
  public:
-  
   TPQueue() : front(nullptr) {}
   ~TPQueue() {
     while (front != nullptr)

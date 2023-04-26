@@ -12,16 +12,16 @@ class TPQueue {
 	Node* front;
  public:
   
-  TPQueue() : front(NULL) {}
+  TPQueue() : front(nullptr) {}
   ~TPQueue() {
-    while (front != NULL)
+    while (front != nullptr)
       pop();
   }
   void push(const T& value) {
-    Node* temp, *curr, *pre = NULL;
+    Node* temp, *curr, *pre = nullptr;
     temp = new Node;
     temp->value = value;
-    if (front == NULL || value.prior > front->value.prior) {
+    if (front == nullptr || value.prior > front->value.prior) {
       temp->next = front;
       front = temp;
     } else {
@@ -35,7 +35,7 @@ class TPQueue {
     }
   }
   T pop() {
-    if (front == NULL) {
+    if (front == nullptr) {
       throw std::string("Empty");
     } else {
       Node* temp;
